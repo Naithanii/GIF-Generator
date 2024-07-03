@@ -39,21 +39,21 @@ const Tag = () => {
 
 
   return (
-    <div className='flex flex-col items-center w-1/2 bg-blue-400 rounded-lg border border-black gap-y-5 mt-[15px] '>
-      <h1 className='mt-[25px] text-2xl uppercase underline font-bold'>Random {tag} GIF</h1>
+    <div className='flex flex-col items-center w-1/2 bg-gradient-to-r from-cyan-500 to-indigo-800 rounded-lg border border-black gap-y-5 mt-[15px] '>
+      <h1 className='mt-[25px] text-2xl uppercase rounded-lg px-3 text-black bg-blue-300 font-bold'>Random - {tag} GIF</h1>
       
       {
         loading ? (<Spinner/>) :(<img src={gif} width="450" />)
       }
       
       <input
-      className='w-10/12 bg-white text-center text-lg py-2 rounded-lg mb-[5px] mt-[15px]'
+      className='w-4/6 bg-white text-center text-lg py-2 rounded-lg mb-[5px] mt-[15px]'
       onChange={changeHandler}
       value={tag}
       />
 
       <button onClick={clickHandler}
-      className='w-10/12 text-lg mb-[24px] py-2 rounded-lg bg-yellow-500' >
+      className='w-4/6 text-lg mb-[24px] py-2 rounded-lg bg-yellow-400 border border-gray-200 font-semibold rounded-xl hover:bg-gray-700 hover:text-white' >
         Generate GIF
       </button>
     </div>

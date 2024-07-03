@@ -31,15 +31,15 @@ const Random = () => {
 
 
   return (
-    <div className='flex flex-col items-center w-1/2 bg-green-400 rounded-lg border border-black gap-y-5 mt-[15px] '>
-      <h1 className='mt-[25px] text-2xl uppercase underline font-bold'>A Random GIF</h1>
+    <div className='flex flex-col items-center w-1/2 bg-gradient-to-br from-emerald-500 to-blue-500 rounded-lg border border-black gap-y-5 mt-[15px] '>
+      <h1 className='mt-[25px] text-2xl uppercase font-bold bg-green-300 rounded-lg px-3'>A Random GIF</h1>
       
       {
         loading ? (<Spinner/>) :(<img src={gif} width="450" />)
       }
       
       <button onClick={clickHandler}
-      className='w-10/12 text-lg mb-[24px] py-2 rounded-lg bg-yellow-500' >
+      className='w-4/6 text-lg mb-[24px] py-2 rounded-lg bg-yellow-400 border border-gray-200 font-semibold rounded-xl hover:bg-gray-700 hover:text-white' >
         Generate GIF
       </button>
     </div>
